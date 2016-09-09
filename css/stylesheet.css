@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  background-color: grey;
+}
+
+.tdc {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: pink;
+}
+
+h1 {
+  color: pink;
+  font-weight: lighter;
+  font-size: 4em;
+}
+
+ul {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  list-style-position: outside;
+}
+
+li {
+  height: 1.5em;
+  border-bottom: 1px solid black;
+}
+
+input {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.removeBut {
+  float: right;
+  margin-left: 1%;
+  font-size: 0.2em;
+}
+
+.tCount {
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+.removeComp {
+  margin-left: 1%;
+  margin-top: 1%;
+}
