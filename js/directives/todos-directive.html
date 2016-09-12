@@ -1,0 +1,12 @@
+<article class="todoList">
+  <!-- repeate a section for each item in an array -->
+  <ul ng-repeat="todo in todoC.todos">
+    <li>
+      <input type="checkbox" ng-model="todo.done">
+      <span ng-class="{ 'done' :todo.done }">{{ todo.title }}</span>
+      <button class="removeBut" ng-click="todoC.removeTodo(todo)">Delete</button>
+    </li>
+  </ul>
+  <p class="tCount">{{ todoC.countTodos() }} todos to do</p>
+  <button class="removeComp" ng-click="todoC.removeComp()">Clear completed</button>
+</article>

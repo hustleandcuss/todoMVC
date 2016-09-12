@@ -16,32 +16,20 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <!-- Module -->
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- Controller -->
+    <!-- Controllers -->
     <script type="text/javascript" src="js/controller.js"></script>
+    <!-- Directives -->
+    <script type="text/javascript" src="js/directives/headerDirective.js"></script>
+    <script type="text/javascript" src="js/directives/formDirective.js"></script>
+    <script type="text/javascript" src="js/directives/todosDirective.js"></script>
   </head>
   <!-- attach a controller function to the page -->
   <body>
     <!-- add controller -->
-    <div class="tdc" ng-controller="TodoController as todoC">
-      <h1>Todo MVC</h1>
-      <div>
-        <form name="todoForm" ng-submit="todoC.addTodo()">
-          <input type="text" name="newTodo" placeholder="What todo?" ng-model="todoC.newT" required="true">
-          <input type="submit" value="Add!" ng-disabled="todoForm.$invalid">
-        </form>
-        <div class="todoList">
-          <!-- repeate a section for each item in an array -->
-          <ul ng-repeat="todo in todoC.todos">
-            <li>
-              <input type="checkbox" ng-model="todo.done">
-              <span ng-class="{ 'done' :todo.done }">{{ todo.title }}</span>
-              <button class="removeBut" ng-click="todoC.removeTodo(todo)">Delete</button>
-            </li>
-          </ul>
-          <p class="tCount">{{ todoC.countTodos() }} todos to do</p>
-          <button class="removeComp" ng-click="todoC.removeComp()">Clear completed</button>
-        </div>
-      </div>
-    </div>
+    <section class="tdc" ng-controller="TodoController as todoC">
+      <header-directive></header-directive>
+      <form-directive></form-directive>
+      <todos-directive></todos-directive>
+    </section>
   </body>
 </html>

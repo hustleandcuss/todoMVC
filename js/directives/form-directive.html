@@ -1,0 +1,4 @@
+<form name="todoForm" ng-submit="todoC.addTodo()">
+  <input type="text" name="newTodo" placeholder="What todo?" ng-model="todoC.newT" required="true">
+  <input type="submit" value="Add!" ng-disabled="todoForm.$invalid">
+</form>
